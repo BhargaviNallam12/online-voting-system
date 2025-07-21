@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify OTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            text-align: center;
+            padding: 100px;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            width: 250px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #e65c50;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter the OTP sent to your email</h2>
+    <form method="post" action="/verify">
+        <input type="text" name="otp" placeholder="Enter OTP" required><br>
+        <input type="submit" value="Verify OTP">
+    </form>
+</body>
+</html>

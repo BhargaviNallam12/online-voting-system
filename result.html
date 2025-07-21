@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting Results</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background: linear-gradient(to right, #ffe259, #ffa751);
+            text-align: center;
+            padding: 100px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 50%;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #ff7e5f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Voting Results</h2>
+    <table>
+        <tr>
+            <th>Candidate</th>
+            <th>Votes</th>
+        </tr>
+        {% for candidate in candidates %}
+        <tr>
+            <td>{{ candidate.name }}</td>
+            <td>{{ candidate.votes }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

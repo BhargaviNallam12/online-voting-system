@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #bdc3c7, #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 100px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        label {
+            display: block;
+            margin: 15px;
+            font-size: 18px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background: #1abc9c;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cast Your Vote</h2>
+    <form method="post" action="/submit_vote">
+        {% for candidate in candidates %}
+            <label>
+                <input type="radio" name="candidate" value="{{ candidate.id }}" required>
+                {{ candidate.name }}
+            </label>
+        {% endfor %}
+        <input type="submit" value="Submit Vote">
+    </form>
+</body>
+</html>

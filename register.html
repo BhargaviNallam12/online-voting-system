@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Voting - Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            text-align: center;
+            padding: 100px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        input[type="email"], input[type="submit"] {
+            padding: 10px;
+            width: 250px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Online Voting</h1>
+    <form method="post" action="/register">
+        <input type="email" name="email" placeholder="Enter your email" required><br>
+        <input type="submit" value="Get OTP">
+    </form>
+</body>
+</html>
