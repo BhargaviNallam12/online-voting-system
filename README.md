@@ -1,31 +1,20 @@
-# 🗳️ Online Voting System with OTP Verification
 
-This is a secure Online Voting System built using **Python Flask**. It uses **email-based OTP verification** to ensure that only valid users can vote, and each user can vote only once.
+💡 Project Overview
+This is a simple Online Voting System with OTP Verification built using Python Flask. It allows users to securely vote for candidates by first verifying their identity through a One-Time Password (OTP) sent to their email. Each user can vote only once, and the final results are displayed after voting.
 
----
+🛠️ Technologies Used
+Python Flask – For building the web application
+Flask-Mail – To send OTP emails for verification
+SQLite – To store user details and vote counts
+HTML/CSS – For designing the web pages
 
-## 💡 Features
 
-- Email-based OTP verification (using Gmail SMTP)
-- Users can vote only once
-- Votes are stored in a local SQLite database
-- Admin can pre-define candidates
-- Results are displayed after voting
 
----
 
-## 🛠️ Tech Stack
 
-- Python 3
-- Flask
-- Flask-Mail
-- SQLite
-- HTML/CSS (with Bootstrap optional)
 
----
 
-## 📦 Installation Instructions
 
-1. **Clone the repository** or download the ZIP
-   ```bash
-   git clone https://github.com/your-username/online-voting-system.git
+
+
+
